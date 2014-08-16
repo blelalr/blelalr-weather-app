@@ -22,12 +22,11 @@ class ViewController: UIViewController, NSURLConnectionDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         //add background
         let background = UIImage(named: "background.jpg")
-        
         self.view.backgroundColor = UIColor(patternImage: background)
-
         self.city.text = "Taipei"
+        
         startConnection()
-
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,10 +48,13 @@ class ViewController: UIViewController, NSURLConnectionDelegate {
     func connection(connection:NSURLConnection!, didReceiveData dataReceived:NSData!){
         self.data.appendData(dataReceived)
         println("downloading")
+        
     }
     //下載完成
     func connectionDidFinishLoading(connection:NSURLConnection!){
         println("download finish")
+        var jsonData = NSString(data: data, encoding: NSUTF8StringEncoding)
+        println(jsonData)
     }
     
     
