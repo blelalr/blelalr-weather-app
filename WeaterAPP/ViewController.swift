@@ -12,6 +12,10 @@ class ViewController: UIViewController, NSURLConnectionDelegate {
     
     @IBOutlet var city:UILabel!
     @IBOutlet var icon:UIImageView!
+    
+    //使用NSMutableData 儲存下載資料
+    var data: NSMutableData = NSMutableData()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,11 +47,11 @@ class ViewController: UIViewController, NSURLConnectionDelegate {
     
     //下載中
     func connection(connection:NSURLConnection!, didReceiveData dataReceived:NSData!){
-    
+        self.data.appendData(dataReceived)
         println("downloading")
     }
     //下載完成
-    func connectDidFinishLoading(connect:NSURLConnection!){
+    func connectionDidFinishLoading(connection:NSURLConnection!){
         println("download finish")
     }
     
