@@ -22,6 +22,13 @@
 			remoteGlobalIDString = 179972B6199F20FB00B50A5F;
 			remoteInfo = WeaterAPP;
 		};
+		17F851A7199F2C57007A80E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 179972AF199F20FA00B50A5F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 179972B6199F20FB00B50A5F;
+			remoteInfo = WeaterAPP;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -141,6 +148,7 @@
 			);
 			dependencies = (
 				179972CB199F20FB00B50A5F /* PBXTargetDependency */,
+				17F851A8199F2C57007A80E2 /* PBXTargetDependency */,
 			);
 			name = WeaterAPPTests;
 			productName = WeaterAPPTests;
@@ -158,6 +166,7 @@
 				TargetAttributes = {
 					179972B6199F20FB00B50A5F = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = FH329PCSSV;
 					};
 					179972C8199F20FB00B50A5F = {
 						CreatedOnToolsVersion = 6.0;
@@ -228,6 +237,11 @@
 			isa = PBXTargetDependency;
 			target = 179972B6199F20FB00B50A5F /* WeaterAPP */;
 			targetProxy = 179972CA199F20FB00B50A5F /* PBXContainerItemProxy */;
+		};
+		17F851A8199F2C57007A80E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 179972B6199F20FB00B50A5F /* WeaterAPP */;
+			targetProxy = 17F851A7199F2C57007A80E2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -327,9 +341,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WeaterAPP/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -338,9 +356,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WeaterAPP/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -397,6 +419,7 @@
 				179972D5199F20FB00B50A5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		179972D6199F20FB00B50A5F /* Build configuration list for PBXNativeTarget "WeaterAPPTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +428,7 @@
 				179972D8199F20FB00B50A5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
