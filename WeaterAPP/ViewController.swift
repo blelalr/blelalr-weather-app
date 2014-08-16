@@ -12,6 +12,7 @@ class ViewController: UIViewController, NSURLConnectionDelegate {
     
     @IBOutlet var city:UILabel!
     @IBOutlet var icon:UIImageView!
+    @IBOutlet var temp:UILabel!
     
     //使用NSMutableData 儲存下載資料
     var data: NSMutableData = NSMutableData()
@@ -55,6 +56,22 @@ class ViewController: UIViewController, NSURLConnectionDelegate {
         println("download finish")
         var jsonData = NSString(data: data, encoding: NSUTF8StringEncoding)
         println(jsonData)
+        
+        var error: NSError?
+        let jsonDictionary = NSJSONSerialization.JSONObjectWithData(self.data, options: NSJSONReadingOptions.MutableContainers, error: &error) as NSDictionary
+        
+        //讀取個像天氣溫度
+        let temp: AnyObject? = jsonDictionary["main"]?["temp"]
+        
+        //資料處理
+        let weatherTempCelsius = Int(round((temp!.floatValue - 273.15)))
+        let weatherTempFahrenheit = Int(round(((temp!.floatValue - 273.15))))
+        
+        //輸出至UI
+        self.temp.text = "\(weatherTempCelsius)℃"
+        
+        
+        
     }
     
     
