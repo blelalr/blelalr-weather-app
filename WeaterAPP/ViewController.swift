@@ -12,15 +12,19 @@ class ViewController: UIViewController {
     
     var api:String = ""
     
-    @IBOutlet var City:UILabel!
-    @IBOutlet var Rainy:UIImageView!
+    @IBOutlet var city:UILabel!
+    @IBOutlet var icon:UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        //add background
+        let background = UIImage(named: "background.jpg")
         
-        self.City.text = "Taipei"
-        
+        self.view.backgroundColor = UIColor(patternImage: background)
+
+        self.city.text = "Taipei"
+
 
     }
 
@@ -28,7 +32,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 
 }
 

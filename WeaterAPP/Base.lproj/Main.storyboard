@@ -30,8 +30,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="City" destination="bop-Y7-GVl" id="4z9-ZW-bNj"/>
-                        <outlet property="Rainy" destination="JRi-9I-naw" id="leI-cb-Nhx"/>
+                        <outlet property="city" destination="bop-Y7-GVl" id="Fhh-WC-X5z"/>
+                        <outlet property="icon" destination="JRi-9I-naw" id="zvO-qI-9N3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
