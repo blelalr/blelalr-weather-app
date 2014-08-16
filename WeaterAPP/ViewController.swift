@@ -9,11 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-                            
+    
+    var api:String = ""
+    
+    @IBOutlet var City:UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        var helloSwift:String = "Hello Swift"
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.City.text = "Taipei"
     }
 
     override func didReceiveMemoryWarning() {
