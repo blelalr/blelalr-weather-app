@@ -8,9 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    
-    var api:String = ""
+class ViewController: UIViewController, NSURLConnectionDelegate {
     
     @IBOutlet var city:UILabel!
     @IBOutlet var icon:UIImageView!
@@ -24,7 +22,7 @@ class ViewController: UIViewController {
         self.view.backgroundColor = UIColor(patternImage: background)
 
         self.city.text = "Taipei"
-
+        startConnection()
 
     }
 
@@ -32,6 +30,28 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func startConnection(){
+        var restAPI:String = "http://api.openweathermap.org/data/2.5/weather?q=Taipei"
+        var url:NSURL = NSURL(string:restAPI)
+        var request: NSURLRequest = NSURLRequest(URL: url)
+        var connection: NSURLConnection = NSURLConnection (request: request, delegate: self, startImmediately: true)
+        
+        println("start download")
+        
+    }
+    
+    //下載中
+    func connection(connection:NSURLConnection!, didReceiveData dataReceived:NSData!){
+    
+        println("downloading")
+    }
+    //下載完成
+    func connectDidFinishLoading(connect:NSURLConnection!){
+        println("download finish")
+    }
+    
+    
     
 
 }
